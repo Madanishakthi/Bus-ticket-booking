@@ -1,64 +1,96 @@
-127.0.0.1:6379> SADD PASS_BIO : name ramu somu ammu
+127.0.0.1:6379> SADD PASS_BIO : pname ram sam anu
 (integer) 5
-127.0.0.1:6379> SADD PASS_BIO  : age 30 53 10
+127.0.0.1:6379> SADD PASS_BIO : age 30 53 10
 (integer) 4
-127.0.0.1:6379> SADD PASS_BIO  : native erode coimbatore tirupur
+127.0.0.1:6379> SADD PASS_BIO : bodate june23 july23 march24
 (integer) 4
-127.0.0.1:6379> SADD BUS_DETAILS : name dolphink krishna sachin
+127.0.0.1:6379> SADD BUS_DETAILS : bname dolphink sachin krishna
 (integer) 5
+127.0.0.1:6379> SADD BUS_DETAILS : noseat 60 61 59
+(integer) 4
 127.0.0.1:6379> SADD BUS_DETAILS : time 9am 10am 7am
 (integer) 4
-127.0.0.1:6379> SADD BUS_DETAILS : seat 60 61 59
+127.0.0.1:6379> SADD STA_DETAILS : driver saran karan maaran
 (integer) 4
-127.0.0.1:6379> SADD BUS_DETAILS : drivers saran karan kiran
+127.0.0.1:6379> SADD STA_DETAILS : conductor ramesh rajesh kamal
 (integer) 4
-127.0.0.1:6379> SADD BUS_DETAILS : conductor rajesh ramesh pranesh
-(integer) 4
-127.0.0.1:6379> SADD BUS_DETAILS : dsalary 20000 23000 25000
-(integer) 4
-127.0.0.1:6379> SADD BUS_DETAILS : csalary 10000 13000 15000
+127.0.0.1:6379>  SADD STA_DETAILS : dsalary 20000 23000 25000
+(integer) 1
+127.0.0.1:6379> SADD STA_DETAILS : csalary 10000 13000 15000
 (integer) 4
 127.0.0.1:6379> SMEMBERS PASS_BIO
- 1) "tirupur"
- 2) "name"
- 3) ":"
- 4) "53"
- 5) "ramu"
- 6) "native"
+ 1) "bodate"
+ 2) "sam"
+ 3) "ram"
+ 4) "30"
+ 5) "age"
+ 6) "july23"
  7) "10"
- 8) "age"
- 9) "30"
-10) "somu"
-11) "coimbatore"
-12) "ammu"
-13) "erode"
+ 8) "53"
+ 9) "anu"
+10) "pname"
+11) ":"
+12) "june23"
+13) "march24"
 127.0.0.1:6379> SMEMBERS BUS_DETAILS
  1) "time"
- 2) "dolphink"
- 3) "23000"
- 4) "10000"
- 5) "7am"
- 6) "name"
- 7) "60"
- 8) "csalary"
- 9) "seat"
-10) "20000"
-11) "15000"
-12) "karan"
-13) "dsalary"
-14) "13000"
-15) "pranesh"
-16) "9am"
-17) "krishna"
-18) "59"
+ 2) "sachin"
+ 3) "60"
+ 4) "noseat"
+ 5) "9am"
+ 6) "krishna"
+ 7) "bname"
+ 8) "59"
+ 9) "7am"
+10) "dolphink"
+11) "61"
+12) "10am"
+13) ":"
+127.0.0.1:6379> SMEMBERS STA_DETAILS
+ 1) "csalary"
+ 2) "25000"
+ 3) "age"
+ 4) "name"
+ 5) "saran"
+ 6) "20000"
+ 7) "10000"
+ 8) "102"
+ 9) "103"
+10) "driver"
+11) "id"
+12) "101"
+13) "23000"
+14) "conductor"
+15) "karan"
+16) "35"
+17) "33"
+18) "maaran"
 19) "rajesh"
-20) ":"
-21) "25000"
-22) "10am"
-23) "conductor"
-24) "ramesh"
-25) "sachin"
-26) "drivers"
-27) "61"
-28) "saran"
-29) "kiran"
+20) "31"
+21) "15000"
+22) "rani"
+23) "salary"
+24) ":"
+25) "dsalary"
+26) "ramesh"
+27) "13000"
+28) "lakshmi"
+29) "kamal"
+30) "selvan"
+127.0.0.1:6379> SADD BUS_DETAILS : bcolor red blue green
+(integer) 4
+127.0.0.1:6379> SADD BUS_COLOR : color red blue green
+(integer) 5
+127.0.0.1:6379> SMEMBERS BUS_COLOR
+1) ":"
+2) "blue"
+3) "red"
+4) "color"
+5) "green"
+127.0.0.1:6379> DEL BUS_COLOR
+(integer) 1
+127.0.0.1:6379>  SMEMBERS BUS_COLOR
+(empty list or set)
+127.0.0.1:6379> SAVE
+OK
+127.0.0.1:6379>

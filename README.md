@@ -5,17 +5,15 @@ Bus ticket registration,Online booking system is the best option for booking a t
               Staff information as 'STA_DETAILS'
                
 The database should support the three entity types:
-
-
                'PASS_BIO'
                         The keys  used in Passenger  information are 
-                                1.Name
+                                1.Passengername as Pname
                                 2.Age
-                                3.Native
+                                3.Date Of Booked as Bodate.
               'BUS_DETAILS'
                         The keys  used in Bus information are 
-                                1.Name
-                                2.Seat
+                                1.Busname as Bname
+                                2.No.Of.Seat as noseat
                                 3.Time
               'STA_DETAILS'
                         The keys  used in Staff information are 
